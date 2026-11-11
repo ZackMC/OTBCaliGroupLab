@@ -1,0 +1,356 @@
+:root {
+    --veryLightBlue: #92DDFF;
+    --lightBlue: #39ade4;
+    --blue: #1580B2;
+    --darkBlue: #11587a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: floralwhite;
+}
+
+/*header and nav*/
+header {
+    display: flex;
+    background: var(--blue);
+    padding-block: 1vi;
+    padding-inline: 1vi;
+    margin: 0;
+
+    h1 {
+        font-size: 11vi;
+        padding-inline-start: 0;
+        margin: 0;
+        padding: 0;
+        line-height: .7em;
+    }
+
+    h1 span {
+        padding-inline-start: 4em;
+        font-size: .5em;
+        font-style: italic;
+    }
+
+    a {
+        margin: 0;
+        block-size: 17vi;
+    }
+
+    img {
+
+        block-size: stretch;
+    }
+
+}
+
+#topBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    background: var(--lightBlue);
+    margin: 0;
+
+    ul {
+        padding-inline: 4vi;
+    }
+
+    li {
+        list-style: none;
+        font-size: 4em;
+        border-block-start: 3px solid rgb(0 0 0 / 0.25);
+        padding-block: .5vi;
+
+        a {
+            text-decoration: none;
+            color: black;
+            vertical-align: center;
+        }
+
+        &:first-of-type {
+            border: 0;
+        }
+    }
+}
+
+/*main*/
+main {
+
+    h2 {
+        font-size: 3.25em;
+        text-align: center;
+        border-block-end: solid var(--blue);
+        margin-inline: 10vi;
+        padding-block-end: 1vi;
+    }
+
+    h3 {
+        font-size: 2.75em;
+        margin-inline-start: 2.5em;
+    }
+
+    div.formatedDiv {
+        font-size: 2.5em;
+        text-align: justify;
+        margin-inline: 2vi;
+        margin-block: 2vi;
+        border: solid 2px black;
+        padding: 1vi;
+        background-color: var(--veryLightBlue);
+        display: flex;
+        flex-flow: column;
+        border-radius: 15px;
+
+        a {
+            text-decoration: underline;
+            color: black;
+            font-weight: bold;
+        }
+
+        p {
+            margin-block: 1vi;
+
+            &::first-letter {
+                font-size: 1.4em;
+                font-weight: bold;
+            }
+
+            span {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+
+        h2 {
+            margin-block: 0;
+            font-size: 1.2em;
+        }
+    }
+
+    .boldSpan {
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    div.gridDiv {
+        display: grid;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: 1fr 3fr;
+        justify-items: stretch;
+        align-items: stretch;
+        margin: 1vi;
+        width: 98vi;
+        border: black solid 3px;
+        margin-block-end: 0;
+
+        p {
+            font-size: 3em;
+            border: black solid 2px;
+            background-color: var(--veryLightBlue);
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        p:nth-child(odd) {
+            background-color: var(--blue);
+
+        }
+
+        p:nth-child(even) {
+            font-size: 5em;
+        }
+
+        ol {
+            font-size: 2.4em;
+            border: black solid 2px;
+            background-color: var(--veryLightBlue);
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            li:first-child {
+                margin-block-start: 1vi;
+            }
+
+            li:last-child {
+                margin-block-end: 1vi;
+            }
+
+            li::after {
+                content: "(To Failure)";
+            }
+
+            li:first-child::after {
+                content: none;
+            }
+
+        }
+    }
+
+    #gridDivWrapper > p {
+        font-size: 2.45em;
+        margin-block-start: 0;
+        text-align: center;
+        background-color: var(--veryLightBlue);
+        margin-inline: 1vi;
+        border-radius: 0 0 15px 15px;
+    }
+
+    div p {
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:link {
+            color: var(--darkBlue);
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: var(--lightBlue);
+        }
+    }
+
+    .customProgDiv {
+        h2 {
+            border: 0;
+            font-size: 2.75em;
+        }
+
+        p {
+            font-size: 2.45em;
+            text-align: justify;
+            margin-inline: 1vi;
+        }
+    }
+
+    #fakeSearchBar {
+        margin-block-start: 5vi;
+        display: flex;
+        border: 3px solid black;
+        border-radius: 15px;
+        margin-inline: 2vi;
+        align-content: center;
+
+        & > p {
+            font-size: 5vi;
+            margin: 0;
+            padding: 0;
+            padding-inline-start: 2vi;
+            color: rgb(0 0 0 / 0.5);
+
+        }
+
+        & > img {
+            block-size: 5vi;
+            margin-block-start: .5vi;
+        }
+    }
+
+    #productList {
+
+        display: flex;
+        justify-content: space-around;
+        margin-block: 5vi;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        div.product {
+            border: solid black 10px;
+            border-radius: 15px;
+            margin-block-end: 5vi;
+            width: fit-content;
+            background-color: var(--lightBlue);
+
+
+            img {
+                width: 760px;
+            }
+
+            h3 {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                background-color: var(--lightBlue);
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 2em;
+                text-align: center;
+                color: rgb(0 0 0 / 0.5);
+                background-color: var(--lightBlue);
+            }
+
+            a.addToCart {
+                text-align: center;
+                display: block;
+                font-size: 2.5em;
+                background-color: orange;
+                border-radius: 10px;
+                border-block-start: black solid 2px;
+
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    text-align: center;
+    font-size: 3em;
+    flex-flow: column;
+    margin-block-start: 25vi;
+    opacity: .6;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    p a:link {
+        color: orange;
+    }
+
+    p a:visited {
+        color: #ffd25d;
+
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+
+    }
+
+    p {
+        display: block;
+        justify-content: space-between;
+        margin-inline: 5%;
+    }
+
+    small {
+        margin-block: 5vi;
+        font-size: .6em;
+    }
+}
+
